@@ -1,0 +1,114 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- ✅ REQUIRED PERMISSIONS -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.NutriNest">
+
+        <!-- Splash Activity -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- Auth Activity -->
+        <activity
+            android:name=".AuthActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+
+        <!-- Login/Register -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+
+        <!-- Welcome Activity -->
+        <activity
+            android:name=".WelcomeActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+
+        <!-- Dashboard -->
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".FoodDiaryActivity"
+            android:screenOrientation="portrait"/>
+
+        <service
+            android:name=".LogoutService"
+            android:exported="false"/>
+
+        <!-- ME ACTIVITY -->
+        <activity
+            android:name=".MeActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+
+        <!-- USER DETAILS -->
+        <activity
+            android:name=".UserDetailsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+
+        <!-- MEAL TIMING -->
+        <activity
+            android:name=".MealTimingActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+
+        <!-- Meals -->
+        <activity
+            android:name=".BreakfastActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".LunchActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".EveningSnacksActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".DinnerActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+
+        <!-- CALORIES TABLE -->
+        <activity
+            android:name=".CaloriesTableActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+
+    </application>
+
+</manifest>

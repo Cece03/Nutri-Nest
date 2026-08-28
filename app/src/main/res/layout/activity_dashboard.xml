@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dashbg"
+    android:padding="16dp">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="#E91E63">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/logobg"
+            android:contentDescription="Logo" />
+
+        <!-- ☰ MENU -->
+        <TextView
+            android:id="@+id/userProfile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="☰"
+            android:textSize="24sp"
+            android:textColor="#FFFFFF" />
+
+        <!-- ✅ FIXED: Me button placed LEFT of ☰ -->
+        <Button
+            android:id="@+id/btnMe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Me"
+            android:layout_toStartOf="@id/userProfile"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"/>
+
+    </RelativeLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/sliderViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="13dp" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="2"
+        android:layout_marginTop="17dp"
+        android:alignmentMode="alignMargins"
+        android:useDefaultMargins="true">
+
+        <ImageView
+            android:id="@+id/boxBreakfast"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_columnWeight="1"
+            android:src="@drawable/breakfastemp"
+            android:scaleType="centerCrop"
+            android:contentDescription="Breakfast" />
+
+        <ImageView
+            android:id="@+id/boxLunch"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_columnWeight="1"
+            android:src="@drawable/lunchtemp"
+            android:scaleType="centerCrop"
+            android:contentDescription="Lunch" />
+
+        <ImageView
+            android:id="@+id/boxSnacks"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_columnWeight="1"
+            android:src="@drawable/eveningtemp"
+            android:scaleType="centerCrop"
+            android:contentDescription="Evening Snacks" />
+
+        <ImageView
+            android:id="@+id/boxDinner"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_columnWeight="1"
+            android:src="@drawable/dinnertemp"
+            android:scaleType="centerCrop"
+            android:contentDescription="Dinner" />
+
+    </GridLayout>
+
+    <Button
+        android:id="@+id/btnCaloriesTable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calories Table"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#9C27B0"
+        android:textColor="#FFFFFF"/>
+</LinearLayout>
